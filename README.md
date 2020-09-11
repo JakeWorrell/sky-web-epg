@@ -1,4 +1,6 @@
-# Sky Web EPG | Current Version: **`5.10oc`**
+# Sky Web EPG - React version
+This is an attempt to port the original Sky Web EPG from https://github.com/OldDigibox/sky-web-epg over to React so that it can take advantage of Components et al.
+
 A recreation of the classic 2008 EPG on the Sky Digiboxes, with the background from Sky+ (2001). While we are only planning on basing this from the 
 latest Sky+ EPG version `5.08.6` (some elements will be reused from `3.8.8`), we have plans to make the 1998 Digibox EPG menu too.
 ![screenshot](Capture.PNG)
