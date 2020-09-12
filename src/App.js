@@ -10,7 +10,7 @@ class MenuItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      to: props.to ?? slugify(this.props.children.toLowerCase()),
+      to: props.to ?? slugify(this.props.children.toLowerCase(),{remove: /[*+~.()'"!:@]/g}),
     };
   }
 
