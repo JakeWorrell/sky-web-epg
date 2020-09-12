@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Link} from "react-router-dom";
+import slugify from "slugify";
 
 class MenuItem extends React.Component {
   constructor(props) {
@@ -12,14 +14,14 @@ class MenuItem extends React.Component {
 
   render() {
     return (
-        <li><div class="num">{this.props.number}</div>{this.props.children.toUpperCase()}</li>
+        <li><div class="num">{this.props.number}</div><Link to={slugify(this.props.children.toLowerCase())}>{this.props.children.toUpperCase()}</Link></li>
     );
   }
 }
 
 function App() {
   return (
-
+    <BrowserRouter>
       <section className="menulisting" id="main">
           <MenuItem number="1">All Channels</MenuItem>
           <MenuItem number="2">Entertainment</MenuItem>
@@ -38,6 +40,7 @@ function App() {
           <a onClick="toPage('main', 'az')">A-Z</a>
         </div>
       </section>
+    </BrowserRouter>
   );
 }
 
